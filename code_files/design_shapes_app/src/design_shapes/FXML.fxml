@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="design_shapes.Design_shapes">
+   <children>
+      <Label layoutX="74.0" layoutY="68.0" text="Shapes:" />
+      <ComboBox fx:id="ShapesList" layoutX="133.0" layoutY="64.0" prefHeight="25.0" prefWidth="128.0" />
+      <Label layoutX="32.0" layoutY="127.0" text="Color:" />
+      <RadioButton fx:id="red" layoutX="94.0" layoutY="127.0" mnemonicParsing="false" onAction="#onRed" text="Red">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="green" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#onGreen" text="Green" toggleGroup="$group" />
+      <RadioButton fx:id="blue" layoutX="229.0" layoutY="127.0" mnemonicParsing="false" onAction="#onBlue" text="Blue" toggleGroup="$group" />
+      <Label layoutX="74.0" layoutY="192.0" text="Stroke width:" />
+      <TextField fx:id="strokeWidth" layoutX="155.0" layoutY="188.0" onKeyPressed="#onEnter" prefHeight="25.0" prefWidth="70.0" />
+      <CheckBox fx:id="backgroundColor" layoutX="101.0" layoutY="267.0" mnemonicParsing="false" onAction="#onCheck" text="Add Background?" />
+      <Pane fx:id="panel" layoutX="281.0" onMouseClicked="#onMouse" prefHeight="400.0" prefWidth="323.0">
+         <children>
+            <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="RED" height="77.0" layoutX="26.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
+            <Circle fx:id="cir" fill="RED" layoutX="148.0" layoutY="186.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle fx:id="sqr" arcHeight="5.0" arcWidth="5.0" fill="RED" height="103.0" layoutX="90.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" width="115.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
